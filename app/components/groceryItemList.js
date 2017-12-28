@@ -1,6 +1,7 @@
 import React from 'react';
 
 import GroceryItem from './GroceryItem';
+import GroceryListAddItem from './groceryListAddItem';
 
 class GroceryItemList extends React.Component {
     render(){
@@ -14,6 +15,7 @@ class GroceryItemList extends React.Component {
                         )
                     })}
                 </div>
+                <GroceryListAddItem />
             </div>
         );
     }

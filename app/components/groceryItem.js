@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const GroceryItem = ({item}) => {
     return(
-        <div>{item.name}</div>
+        <h4 className={item.purchased ? "strikethrough" : ""}>{item.name}</h4>
     );
 };
 
