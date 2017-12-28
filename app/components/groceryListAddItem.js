@@ -1,5 +1,7 @@
 import React from 'react';
 
+import action from './../actions/groceryItemActionCreator';
+
 class GroceryListAddItem extends React.Component {
     constructor(props,context){
         super(props,context);
@@ -14,8 +16,12 @@ class GroceryListAddItem extends React.Component {
 
     addItem(e){
         e.preventDefault();
-        console.log("Adding items.." + this.state.input);;
-        
+        //console.log("Adding items.." + this.state.input);
+        action.add({
+            name: this.state.input
+        });
+
+        this.setState({input:''});
     }
 
     render()
